@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	}
+body{
+	font-family: 'Spartan', sans-serif;
+	font-size: 0.75rem;
+	}
+img{
+	width: 100%;
+	height: auto;
+	}
+.container{
+ 	max-width: 1440px;
+ 	margin: 0 auto;
+ 	position: relative;
+	}
+.container-slid{
+	display: flex;
+	position: relative;
+	z-index: 300;
+	}
+.mainMenu{
+	top: 50px;
+	left: 200px;
+	position: absolute;
+	color: #fff;
+	}
+.menuNevigation{
+	display: flex;
+	align-items: center;
+	}
+.logo{
+	margin-right: 30px;
+	font-size: 1rem;
+	}
+.ulMenu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+.ulMenu li{
+	list-style-type: none;
+	margin-right: 20px;
+	}
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  display: none;
+  z-index: 100;
+  }
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+ }
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  }
+.imgMain{
+	margin-bottom: -4px;
+	}
+.main_shop{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	position: relative;
+	}
+.btn{
+	background-color: #000;
+	outline: none;
+	border: 0;
+	padding: 30px 35px;
+	float: left;
+	}
+.btn img{
+	width: 15px;
+	height: 20px;
+	}
+.main_Text{
+  	margin:20% 20% 0 20%;
+
+	}
+.btn_main{
+	position: relative;
+}
+.main_shop .main_Text h1{
+	font-size: 2rem;
+	width: 400px;
+	margin-bottom: 30px;
+	padding: 10px;
+	}
+.main_shop .main_Text p{
+	width: 400px;
+	color: hsl(0, 0%, 63%);
+	font-family: 'Spartan', sans-serif;
+	font-size: 0.75rem;
+	margin-bottom: 40px;
+	line-height:  	1.25rem;
+	padding: 10px;
+	}
+.btnshop{
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	font-size:1.125rem;
+	display: flex;
+	font-weight: 500;
+	width: 500px;
+	margin-bottom: 15px;
+	}
+.shopIcon{
+	width: 40px;
+	margin-left: 40px;
+	}
+.aboutMain{
+	display: grid;
+	grid-template-columns: 3fr 4fr 3fr;
+	}
+.aboutMain img{
+	width: 400px;
+	height: 270px;
+	}
+.aboutText{
+	padding: 70px 48px 20px 48px;
+	}
+.aboutText h2{
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	margin-bottom: 20px;
+	font-family: 'Spartan', sans-serif;
+	letter-spacing: 3px;
+	}
+.aboutText p{
+	 line-height: 1.6;
+	 color: hsl(0, 0%, 63%);
+	}
+.main_img div{
+	display: none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+
+	.container-slid{
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+		}
+	.mainMenu{
+		top: 30px;
+		left:30px;
+		color: #000;
+		position: absolute;
+		z-index: 300;
+		}
+	.mainMenu.show{
+		top: 0;
+		right: 0;
+		left: 0;
+		background: #fff;
+		padding: 20px;
+		}
+	.logo{
+		margin: 0 0 0 70px;
+		font-size: 1.5rem;
+		color: #fff;
+		}
+	.bar1, 
+	.bar2, 
+	.bar3 {
+		display: block;
+		background-color: #f0f0f0;
+    	}
+    .hamburger{
+		display: block;
+	    }
+	.hamburger-close{
+		display: none;
+	    } 
+	.ulMenu{
+		display: none;
+		}	
+	.ulMenu.show{
+		display:flex;
+		margin:0 0 0 30px;
+		color: #000;
+		}
+	.logo.show{
+		display: none;
+		}
+  	.aboutMain{
+  		grid-template-columns: auto;
+  		}
+  	.aboutMain img{
+  		width: 100%;
+  		height: auto;
+  		}
+ 	.main_shop .main_Text h1{
+		width: 100%;
+		padding: 10px;
+ 		}
+ 	.main_shop .main_Text p{
+		width: 100%;
+		padding: 10px;
+		}
+	.main_Text{
+		margin:30px;
+		}
+	.main_shop .main_Text h1{
+		width: 100%;
+		margin: 50px 0 0 0;
+		}
+	.main_shop .main_Text p{
+		width: 100%;
+		}
+	.btnshop{
+		width: 100%;
+		display: block;
+		}
+	.btn_main{
+		display: none;
+		}
+	.main_img{
+		position: relative;
+	}
+	.main_img div{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+	}
+}
+
+
